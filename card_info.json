@@ -1,0 +1,103 @@
+{
+    "Neighbourhoods" : ["Grossbasler Innenstadt",
+                        "St. Alban",
+                        "Grossbasler Innenstadt",
+                        "Gundeldingen",
+                        "Bruderholz",
+                        "Dreispitz",
+                        "Wettstein",
+                        "Iselin",
+                        "Gotthelf",
+                        "Bachletten",
+                        "St. Johann",
+                        "Matthaeus",
+                        "Klybeck",
+                        "Kleinhueningen",
+                        "Kleinbasler Altstadt",
+                        "Basel Nord",
+                        "Riehen"
+                    ],
+    "cards": [
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Johanniterbruecke",
+            "Type": "Bridge",
+            "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
+            "PictureName": "card1_johanniterbruecke.jpg",
+            "Description": "This is the description for Card 1."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Kunstmusseum",
+            "Type": "Museum",
+            "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
+            "PictureName": "card2_kunstmusseum.jpg",
+            "Description": "This is the description for Card 2."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Kannenfeldpark",
+            "Type": "Park",
+            "Neighbourhood": "St. Johann",
+            "PictureName": "card3_kannenfeld.jpg",
+            "Description": "This is the description for Card 3."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Basler Muenster",
+            "Type": "Church",
+            "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
+            "PictureName": "card4_baslermuenster.jpg",
+            "Description": "This is the description for Card 4."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Basel Dreispitz",
+            "Type": "Train station",
+            "Neighbourhood": "Gundeldingen, Bruderholz & Dreispitz",
+            "PictureName": "card5_dreispitz.jpg",
+            "Description": "This is the description for Card 5."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Roche tower 2",
+            "Type": "Building",
+            "Neighbourhood": "Wettstein",
+            "PictureName": "card6_rochetower2.jpg",
+            "Description": "This is the description for Card 6."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Dreilaendereck",
+            "Type": "Monument",
+            "Neighbourhood": "",
+            "PictureName": "card7_dreilaendereck.jpg",
+            "Description": "This is the description for Card 7."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Sommercasino",
+            "Type": "Culture centre",
+            "Neighbourhood": "",
+            "PictureName": "card8_sommercasino.jpg",
+            "Description": "This is the description for Card 8."
+        },
+        {
+            "XCoordinates": 47.14235,
+            "YCoordinates": 37.31235,
+            "Name": "Birskoepfli",
+            "Type": "Park",
+            "Neighbourhood": "",
+            "PictureName": "card9_birskoepfli.jpg",
+            "Description": "This is the description for Card 9."
+        }
+    ]
+}
