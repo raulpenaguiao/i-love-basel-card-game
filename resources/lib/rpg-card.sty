@@ -1,0 +1,27 @@
+\ProvidesPackage{resources/lib/rpg-card}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% dependencies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[margin=6mm,top=5mm]{geometry}
+\usepackage{anttor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows}
+\usepackage{pifont}
+\usepackage{fourier-orns}
+
+%%% internal
+\usepackage{resources/lib/card/style}
+\usepackage{resources/lib/card/colors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\cardtypeBuilding}[2]{\cardtype{#1}{#1}{\includegraphics[width=0.5cm]{resources\imgs\cards\\detokenize{#1}}}{}}

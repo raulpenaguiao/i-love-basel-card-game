@@ -25,7 +25,8 @@
             "Type": "Bridge",
             "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
             "PictureName": "card1_johanniterbruecke.jpg",
-            "Description": "This is the description for Card 1."
+            "SmallDescription": "Small text for Card 1.",
+            "Description": "This is a Description of something about Card 1."
         },
         {
             "XCoordinates": 47.14235,
@@ -34,7 +35,8 @@
             "Type": "Museum",
             "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
             "PictureName": "card2_kunstmusseum.jpg",
-            "Description": "This is the description for Card 2."
+            "SmallDescription": "Small text for Card 2.",
+            "Description": "This is a Description of something about Card 2."
         },
         {
             "XCoordinates": 47.14235,
@@ -43,7 +45,8 @@
             "Type": "Park",
             "Neighbourhood": "St. Johann",
             "PictureName": "card3_kannenfeld.jpg",
-            "Description": "This is the description for Card 3."
+            "SmallDescription": "Small text for Card 3.",
+            "Description": "This is a Description of something about Card 3."
         },
         {
             "XCoordinates": 47.14235,
@@ -52,16 +55,18 @@
             "Type": "Church",
             "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
             "PictureName": "card4_baslermuenster.jpg",
-            "Description": "This is the description for Card 4."
+            "SmallDescription": "Small text for Card 4.",
+            "Description": "This is a Description of something about Card 4."
         },
         {
             "XCoordinates": 47.14235,
             "YCoordinates": 37.31235,
             "Name": "Basel Dreispitz",
-            "Type": "Train station",
+            "Type": "Station",
             "Neighbourhood": "Gundeldingen, Bruderholz & Dreispitz",
             "PictureName": "card5_dreispitz.jpg",
-            "Description": "This is the description for Card 5."
+            "SmallDescription": "Small text for Card 5.",
+            "Description": "This is a Description of something about Card 5."
         },
         {
             "XCoordinates": 47.14235,
@@ -70,7 +75,8 @@
             "Type": "Building",
             "Neighbourhood": "Wettstein",
             "PictureName": "card6_rochetower2.jpg",
-            "Description": "This is the description for Card 6."
+            "SmallDescription": "Small text for Card 6.",
+            "Description": "This is a Description of something about Card 6."
         },
         {
             "XCoordinates": 47.14235,
@@ -79,7 +85,8 @@
             "Type": "Monument",
             "Neighbourhood": "",
             "PictureName": "card7_dreilaendereck.jpg",
-            "Description": "This is the description for Card 7."
+            "SmallDescription": "Small text for Card 7.",
+            "Description": "This is a Description of something about Card 7."
         },
         {
             "XCoordinates": 47.14235,
@@ -88,7 +95,8 @@
             "Type": "Culture centre",
             "Neighbourhood": "",
             "PictureName": "card8_sommercasino.jpg",
-            "Description": "This is the description for Card 8."
+            "SmallDescription": "Small text for Card 8.",
+            "Description": "This is a Description of something about Card 8."
         },
         {
             "XCoordinates": 47.14235,
@@ -97,7 +105,8 @@
             "Type": "Park",
             "Neighbourhood": "",
             "PictureName": "card9_birskoepfli.jpg",
-            "Description": "This is the description for Card 9."
+            "SmallDescription": "Small text for Card 9.",
+            "Description": "This is a Description of something about Card 9."
         }
     ]
 }
