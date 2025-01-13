@@ -19,94 +19,103 @@
                     ],
     "cards": [
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.564908413874065,
+            "YCoordinates": 7.58581701136972,
             "Name": "Johanniterbruecke",
             "Type": "Bridge",
             "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
             "PictureName": "card1_johanniterbruecke.jpg",
             "SmallDescription": "Small text for Card 1.",
-            "Description": "This is a Description of something about Card 1."
+            "Description": "This is a Description of something about Card 1.",
+            "gmaps_link": "https://maps.app.goo.gl/butJpFgAwNdXbMbx6"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.554026839552655,
+            "YCoordinates": 7.594181541880351,
             "Name": "Kunstmusseum",
             "Type": "Museum",
             "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
             "PictureName": "card2_kunstmusseum.jpg",
             "SmallDescription": "Small text for Card 2.",
-            "Description": "This is a Description of something about Card 2."
+            "Description": "This is a Description of something about Card 2.",
+            "gmaps_link": "https://maps.app.goo.gl/P5wf9rpScu9qi1am9"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.56544750205321,
+            "YCoordinates": 7.5698052328768695,
             "Name": "Kannenfeldpark",
             "Type": "Park",
             "Neighbourhood": "St. Johann",
             "PictureName": "card3_kannenfeld.jpg",
             "SmallDescription": "Small text for Card 3.",
-            "Description": "This is a Description of something about Card 3."
+            "Description": "This is a Description of something about Card 3.",
+            "gmaps_link": "https://maps.app.goo.gl/5mQ95ka8TetN3fYp9"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.55629190911037,
+            "YCoordinates": 7.591983555548133,
             "Name": "Basler Muenster",
             "Type": "Church",
             "Neighbourhood": "Grossbasler Innenstadt & St. Alban",
             "PictureName": "card4_baslermuenster.jpg",
             "SmallDescription": "Small text for Card 4.",
-            "Description": "This is a Description of something about Card 4."
+            "Description": "This is a Description of something about Card 4.",
+            "gmaps_link": "https://maps.app.goo.gl/gFE4H9CHwyg1cFVKA"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.53746139623489,
+            "YCoordinates": 7.609542011457513,
             "Name": "Basel Dreispitz",
             "Type": "Station",
             "Neighbourhood": "Gundeldingen, Bruderholz & Dreispitz",
             "PictureName": "card5_dreispitz.jpg",
             "SmallDescription": "Small text for Card 5.",
-            "Description": "This is a Description of something about Card 5."
+            "Description": "This is a Description of something about Card 5.",
+            "gmaps_link": "https://maps.app.goo.gl/s1xhhxQd32M9dzpW7"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.559434656214684,
+            "YCoordinates": 7.607327515797326,
             "Name": "Roche tower 2",
             "Type": "Building",
             "Neighbourhood": "Wettstein",
             "PictureName": "card6_rochetower2.jpg",
             "SmallDescription": "Small text for Card 6.",
-            "Description": "This is a Description of something about Card 6."
+            "Description": "This is a Description of something about Card 6.",
+            "gmaps_link": "https://maps.app.goo.gl/GKAkGQPMx7gLpAcU6"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.588550788494274,
+            "YCoordinates": 7.58977699407997,
             "Name": "Dreilaendereck",
             "Type": "Monument",
             "Neighbourhood": "",
             "PictureName": "card7_dreilaendereck.jpg",
             "SmallDescription": "Small text for Card 7.",
-            "Description": "This is a Description of something about Card 7."
+            "Description": "This is a Description of something about Card 7.",
+            "gmaps_link": "https://maps.app.goo.gl/tWF3CXHvPov9RY8x6"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.5474512283784,
+            "YCoordinates": 7.598575116793962,
             "Name": "Sommercasino",
             "Type": "Culture centre",
             "Neighbourhood": "",
             "PictureName": "card8_sommercasino.jpg",
             "SmallDescription": "Small text for Card 8.",
-            "Description": "This is a Description of something about Card 8."
+            "Description": "This is a Description of something about Card 8.",
+            "gmaps_link": "https://maps.app.goo.gl/pRt3V7nyZXcqtdX28"
         },
         {
-            "XCoordinates": 47.14235,
-            "YCoordinates": 37.31235,
+            "XCoordinates": 47.55758517781579,
+            "YCoordinates": 7.616900603960913,
             "Name": "Birskoepfli",
             "Type": "Park",
             "Neighbourhood": "",
             "PictureName": "card9_birskoepfli.jpg",
             "SmallDescription": "Small text for Card 9.",
-            "Description": "This is a Description of something about Card 9."
+            "Description": "This is a Description of something about Card 9.",
+            "gmaps_link": "https://maps.app.goo.gl/Uf3JBegg5Xc9K13o6"
         }
     ]
 }

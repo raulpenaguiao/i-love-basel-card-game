@@ -23,9 +23,6 @@ def create_tex_file_cards(data, output_path, card_front_template_path, card_back
     card_front_template = ""
     with open(card_front_template_path, 'r') as file:
         card_front_template = file.read()
-
-        
-    #Get the card template text
     card_back_template = ""
     with open(card_back_template_path, 'r') as file:
         card_back_template = file.read()
@@ -37,7 +34,7 @@ def create_tex_file_cards(data, output_path, card_front_template_path, card_back
     for card in data_json_cards:
         new_cards_front.append(NewCard(card, card_front_template))
         new_cards_back.append(NewCard(card, card_back_template))
-    #make sure we are printing a multiple of 6 cards
+    #make sure we are printing a multiple of cards_per_page cards
     cards_per_page = 6
     if number_cards%cards_per_page > 0:
         card = data_json_cards[0]
@@ -51,23 +48,24 @@ def create_tex_file_cards(data, output_path, card_front_template_path, card_back
 
     #Start producing the content of the .tex file and output
     middle_string = "\n\hspace{1mm}\n"
+    break_line_string = "\end{center}\n\n\\vspace{5mm}\n\n\\begin{center}\n"
     content = ""
     for i in range(number_pages):
-        content += "\hspace{-3mm}\n"
+        content += "\\begin{center}\n"
         for j in range(3):
             content += new_cards_front[i*6 + j] + middle_string
-        content += "\n\n\\vspace{5mm}\n\n\hspace{-2.5mm}\n"
+        content += break_line_string
         for j in range(3,6):
             content += new_cards_front[i*6 + j] + middle_string
-        content += "\n\n\\vspace{5mm}\n\n\hspace{-2.5mm}\n"
+        content += break_line_string
         for j in range(2, -1, -1):
             content += new_cards_back[i*6 + j] + middle_string
-        content += "\n\n\\vspace{5mm}\n\n\hspace{-2.5mm}\n"
+        content += break_line_string
         for j in range(5, 2, -1):
             content += new_cards_back[i*6 + j] + middle_string
-        content += "\n\n\\vspace{5mm}\n\n"
-    #emove last middle string
-    content = content[:-len(middle_string)]
+        content += "\n\n\end{center}\n\n"
+    #remove last middle string
+    content = content[:-len(middle_string + "\n\n\end{center}\n\n")]  + "\n\n\end{center}\n\n"
 
     with open(output_path, 'w') as file:
         file.write(content)
