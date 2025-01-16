@@ -2,19 +2,27 @@ import subprocess
 import json
 import pandas as pd
 
+
+ROUNDING_DIGITS = 4
+
 def read_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
 def NewCard(card, card_front_template):
-    if card["PictureName"] == "":
-        card["PictureName"] = "nia.jpg"
-    new_card = card_front_template.replace("##Image##", "resources/imgs/cards/" + card["PictureName"])
+    if card["FrontPictureName"] == "":
+        card["BackPictureName"] = "nia.jpg"
+    if card["FrontPictureName"] == "":
+        card["BackPictureName"] = "nia.jpg"
+    new_card = card_front_template.replace("##FrontImage##", "resources/imgs/cards/" + card["FrontPictureName"])
+    new_card = new_card.replace("##BackImage##", "resources/imgs/cards/" + card["BackPictureName"])
     new_card = new_card.replace("##Title##", card["GermanName"])
     new_card = new_card.replace("##Type##", card["Category"])
     new_card = new_card.replace("##Description##", card["Description"])
     new_card = new_card.replace("##SmallDescription##", card["SmallDescription"])
-    new_card = new_card.replace("##Coordinates##", str(round(card["NCoordinate"], 5)) + "$^{\circ}$N " + str(round(card["ECoordinate"], 5)) + "$^{\circ}$E")
+    digit_format = '.' + str(ROUNDING_DIGITS)+'f'
+    formatted_coordinates = format(card["NCoordinate"], digit_format) + "$^{\circ}$N " + format(card["ECoordinate"], digit_format) + "$^{\circ}$E"
+    new_card = new_card.replace("##Coordinates##", formatted_coordinates)
     return new_card
 
 def create_tex_file_cards(data, output_path, card_front_template_path, card_back_template_path):
@@ -89,7 +97,8 @@ def create_json_file(excel_file_paths, json_file_path):
         card["SmallDescription"] = row["SmallDescription"]
         card["NCoordinate"] = row["NCoordinate"]
         card["ECoordinate"] = row["ECoordinate"]
-        card["PictureName"] = row["PictureName"]
+        card["FrontPictureName"] = row["FrontPictureName"]
+        card["BackPictureName"] = row["BackPictureName"]
         data_json["cards"].append(card)
     
     data_json["neighbourhoods"] = []
