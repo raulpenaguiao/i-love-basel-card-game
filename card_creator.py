@@ -7,6 +7,8 @@ def read_json(file_path):
         return json.load(file)
 
 def NewCard(card, card_front_template):
+    if card["PictureName"] == "":
+        card["PictureName"] = "nia.jpg"
     new_card = card_front_template.replace("##Image##", "resources/imgs/cards/" + card["PictureName"])
     new_card = new_card.replace("##Title##", card["GermanName"])
     new_card = new_card.replace("##Type##", card["Category"])
