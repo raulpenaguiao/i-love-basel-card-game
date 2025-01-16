@@ -1,6 +1,7 @@
 import subprocess
 import json
 import pandas as pd
+import os
 
 
 ROUNDING_DIGITS = 4
@@ -131,8 +132,8 @@ if __name__ == "__main__":
     }
     json_file_path = 'card_info.json'  #JSON file path
     tex_file_path = 'templated_cards.tex'
-    card_front_template_path = "templates\\card_front_template.tex"
-    card_back_template_path = "templates\\card_back_template.tex"
+    card_front_template_path = os.path.join("templates", "card_front_template.tex")
+    card_back_template_path = os.path.join("templates", "card_back_template.tex")
     create_json_file(excel_file_paths, json_file_path)
     create_tex_file_cards(json_file_path, tex_file_path, card_front_template_path, card_back_template_path)
     subprocess.run(['pdflatex', 'cards.tex'])
