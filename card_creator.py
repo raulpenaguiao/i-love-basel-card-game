@@ -1,5 +1,6 @@
 import subprocess
 import json
+import pandas as pd
 
 def read_json(file_path):
     with open(file_path, 'r') as file:
@@ -7,11 +8,11 @@ def read_json(file_path):
 
 def NewCard(card, card_front_template):
     new_card = card_front_template.replace("##Image##", "resources/imgs/cards/" + card["PictureName"])
-    new_card = new_card.replace("##Title##", card["Name"])
-    new_card = new_card.replace("##Type##", card["Type"])
+    new_card = new_card.replace("##Title##", card["GermanName"])
+    new_card = new_card.replace("##Type##", card["Category"])
     new_card = new_card.replace("##Description##", card["Description"])
     new_card = new_card.replace("##SmallDescription##", card["SmallDescription"])
-    new_card = new_card.replace("##Coordinates##", str(round(card["XCoordinates"], 5)) + "$^{\circ}$N " + str(round(card["YCoordinates"], 5)) + "$^{\circ}$E")
+    new_card = new_card.replace("##Coordinates##", str(round(card["NCoordinate"], 5)) + "$^{\circ}$N " + str(round(card["ECoordinate"], 5)) + "$^{\circ}$E")
     return new_card
 
 def create_tex_file_cards(data, output_path, card_front_template_path, card_back_template_path):
@@ -70,10 +71,57 @@ def create_tex_file_cards(data, output_path, card_front_template_path, card_back
     with open(output_path, 'w') as file:
         file.write(content)
 
+
+def create_json_file(excel_file_paths, json_file_path):
+    data_json = {}
+    data_cards = pd.read_csv(excel_file_paths["cards"]).fillna('')
+    data_json["cards"] = []
+    for _, row in data_cards.iterrows():
+        card = {}
+        card["GermanName"] = row["GermanName"]
+        card["EnglishName"] = row["EnglishName"]
+        card["Neighbourhood"] = row["Neighbourhood"]
+        card["GMapsLink"] = row["GMapsLink"]
+        card["Category"] = row["Category"]
+        card["Description"] = row["Description"]
+        card["SmallDescription"] = row["SmallDescription"]
+        card["NCoordinate"] = row["NCoordinate"]
+        card["ECoordinate"] = row["ECoordinate"]
+        card["PictureName"] = row["PictureName"]
+        data_json["cards"].append(card)
+    
+    data_json["neighbourhoods"] = []
+    data_neighbourhoods = pd.read_csv(excel_file_paths["neighbourhoods"]).fillna('')
+    for _, row in data_neighbourhoods.iterrows():
+        neighbourhood = {}
+        neighbourhood["GermanName"] = row["GermanName"]
+        neighbourhood["EnglishName"] = row["EnglishName"]
+        neighbourhood["PictureName"] = row["PictureName"]
+        data_json["neighbourhoods"].append(neighbourhood)
+
+    data_json["categories"] = []
+    data_categories = pd.read_csv(excel_file_paths["categories"]).fillna('')
+    for _, row in data_categories.iterrows():
+        category = {}
+        category["GermanName"] = row["GermanName"]
+        category["EnglishName"] = row["EnglishName"]
+        category["PictureName"] = row["PictureName"]
+        data_json["categories"].append(category)
+
+    with open(json_file_path, 'w') as file:
+        json.dump(data_json, file)
+
+
 if __name__ == "__main__":
-    json_file_path = 'card_info.json'  # Change this to your JSON file path
+    excel_file_paths = {  #Excel file paths
+        "cards":'places_basel_cards.csv', 
+        "neighbourhoods": 'places_basel_neighbourhoods.csv', 
+        "categories":'places_basel_categories.csv'
+    }
+    json_file_path = 'card_info.json'  #JSON file path
     tex_file_path = 'templated_cards.tex'
     card_front_template_path = "card_front_template.tex"
     card_back_template_path = "card_back_template.tex"
+    create_json_file(excel_file_paths, json_file_path)
     create_tex_file_cards(json_file_path, tex_file_path, card_front_template_path, card_back_template_path)
     subprocess.run(['pdflatex', 'cards.tex'])
